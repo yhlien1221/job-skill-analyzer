@@ -32,24 +32,21 @@ and better align their technical skills with current job market demand.
 ## Project Structure
 
 job-skill-analyzer/
-├── app.py # Streamlit main application
-├── requirements.txt # Python dependencies
-├── README.md # Project documentation
+├── app.py              # Streamlit main application
+├── requirements.txt    # Python dependencies
+├── README.md           # Project documentation
 ├── .gitignore
-├── .env.example # Environment variable template
-│
+├── .env.example        # Environment variable template
 ├── data/
-│ ├── jobs_raw.csv # Raw job postings (generated after analysis)
-│ └── skill_frequency.csv # Aggregated skill frequency output
-│
+│   ├── jobs_raw.csv    # Raw job postings
+│   └── skill_frequency.csv # Aggregated skill frequency
 ├── src/
-│ ├── init.py
-│ ├── fetch_jobs.py # Fetch job postings from Adzuna API
-│ ├── skill_extractor.py # Extract skills from job descriptions
-│ └── utils.py # Shared helper functions
-│
+│   ├── __init__.py
+│   ├── fetch_jobs.py   # Fetch jobs from Adzuna API
+│   ├── skill_extractor.py # Extract skills
+│   └── utils.py        # Shared helper functions
 └── notebooks/
-└── exploration.ipynb # Optional exploratory analysis
+    └── exploration.ipynb # Optional exploratory analysis
 
 
 
