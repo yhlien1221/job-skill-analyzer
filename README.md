@@ -1,107 +1,37 @@
-# Job Skill Analyzer
+# Job Skill Analyzer: Data Science & Analytics
 
-A Streamlit-based application that analyzes recent job postings in a given U.S. city
-and extracts the most in-demand skills for Data Scientist and Data Analyst roles.
+A data-driven tool designed to analyze real-time job market trends and skill requirements within the Data Science and Analytics sectors. This application automates the process of fetching, scraping, and visualizing technical demands from active job listings.
 
-This project is designed to help job seekers identify skill gaps, prioritize learning,
-and better align their technical skills with current job market demand.
+## Project Overview
+As a **Data Scientist** and **PhD Candidate in Epidemiology at Johns Hopkins University**, I built this analyzer to bridge the gap between academic research and industry requirements. By leveraging the Adzuna API, the tool provides localized insights—specifically targeting areas like **Baltimore, MD** and **Washington DC**—to identify which skills are most valued by employers today.
 
----
+## Core Features
 
-## Features
+### 1. Automated Data Pipeline
+* **Adzuna API Integration:** Fetches real-time job listings based on specific keywords and regional filters.
+* **Deep Scraper:** Uses `cloudscraper` and `trafilatura` to extract full job descriptions, ensuring a more comprehensive skill analysis than basic summaries provide.
+* **Title Filtering:** Includes logic to focus strictly on Data Science and Analyst roles while excluding unrelated positions.
 
-- Search job postings by **city**, **job title**, and **posting date**
-- Fetch recent job data using a **legal job posting API (Adzuna)**
-- Automatically extract technical skills from job descriptions
-- Visualize skill demand using interactive charts
-- View and download raw job data and aggregated skill results
+### 2. Technical Skill Taxonomy
+The analyzer categorizes extracted information into a structured taxonomy, mapping keywords to critical domains:
+* **Programming:** Python, SQL, R, SAS, Stata, Java.
+* **Stats & Research:** Bayesian Statistics, Causal Inference, Epidemiology, Spatial Analysis.
+* **ML & AI:** NLP, LLMs, Deep Learning, Scikit-learn, PyTorch.
+* **Cloud & Big Data:** AWS, Azure, Snowflake, Databricks, Spark.
+* **Visualization:** Tableau, Power BI, Seaborn, Matplotlib.
 
----
+### 3. Data Visualization & Export
+* **Dynamic Dashboard:** Built with Streamlit to display high-fidelity bar charts of skill frequency.
+* **Market Insights:** Calculates the percentage of job postings that mention specific technologies to highlight "must-have" skills.
+* **Data Portability:** Allows users to download the full analyzed dataset as a CSV for further exploration.
 
 ## Tech Stack
+* **Language:** Python
+* **Framework:** Streamlit
+* **Data Handling:** Pandas, NumPy
+* **Visualization:** Matplotlib, Seaborn
+* **Web Scraping:** Trafilatura, Cloudscraper
+* **API/Networking:** Requests, Pyngrok
 
-- **Programming Language:** Python  
-- **Web App Framework:** Streamlit  
-- **Data Processing:** Pandas  
-- **Job Data Source:** Adzuna Job Search API  
-- **Visualization:** Streamlit built-in charts  
-- **Configuration Management:** dotenv  
-
----
-
-## Project Structure
-
-job-skill-analyzer/
-├── app.py              # Streamlit main application
-├── requirements.txt    # Python dependencies
-├── README.md           # Project documentation
-├── .gitignore
-├── .env.example        # Environment variable template
-├── data/
-│   ├── jobs_raw.csv    # Raw job postings
-│   └── skill_frequency.csv # Aggregated skill frequency
-├── src/
-│   ├── __init__.py
-│   ├── fetch_jobs.py   # Fetch jobs from Adzuna API
-│   ├── skill_extractor.py # Extract skills
-│   └── utils.py        # Shared helper functions
-└── notebooks/
-    └── exploration.ipynb # Optional exploratory analysis
-
-
-
----
-
-## How It Works
-
-1. The user selects a city, job title(s), and a minimum posting date in the Streamlit UI.
-2. The application queries the Adzuna API to retrieve relevant job postings.
-3. Job descriptions are processed to identify predefined technical skills.
-4. Skill frequencies are aggregated and visualized.
-5. Results can be exported as CSV files for further analysis.
-
----
-
-## How to Run Locally
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/your-username/job-skill-analyzer.git
-cd job-skill-analyzer
-
-## 2. Create a virtual environment (recommended)
-python -m venv venv
-source venv/bin/activate   # macOS / Linux
-# venv\Scripts\activate    # Windows
-
-## 3. Install dependencies
-pip install -r requirements.txt
-
-## 4. Configure environment variables
-cp .env.example .env
-
-### Add your Adzuna API credentials:
-ADZUNA_APP_ID=your_app_id
-ADZUNA_APP_KEY=your_app_key
-
-## 5. Run the Streamlit app
-streamlit run app.py
-
-
-## A job seeker targeting Data Scientist roles in Baltimore can:
-
-* Analyze postings from the last 30–60 days
-
-* Identify the most frequently required skills (e.g., Python, SQL, AWS)
-
-* Compare those requirements against their current skill set
-
-* Prioritize which skills to develop next
-
-## Output
-* jobs_raw.csv (Raw job postings that match the search criterias)
-* skill_frequency.csv (Aggregated skill demand across job postings)
-
-## Author
-* Created by Yu-Hui Lien
+## Impact
+This project demonstrates the ability to deploy an end-to-end data product—from API handling and NLP-based text parsing to user-facing visualization—providing actionable intelligence for career development in technical fields.
