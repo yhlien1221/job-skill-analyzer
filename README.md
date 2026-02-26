@@ -3,7 +3,7 @@
 A data-driven tool designed to analyze real-time job market trends and skill requirements within the Data Science and Analytics sectors. This application automates the process of fetching, scraping, and visualizing technical demands from active job listings.
 
 ## Project Overview
-As a **Data Scientist** and **PhD Candidate in Epidemiology at Johns Hopkins University**, I built this analyzer to bridge the gap between academic research and industry requirements. By leveraging the Adzuna API, the tool provides localized insights—specifically targeting areas like **Baltimore, MD** and **Washington DC**—to identify which skills are most valued by employers today.
+As a **Data Scientist**, I built this analyzer to bridge the gap between academic research and industry requirements. By leveraging the Adzuna API, the tool provides localized insights—specifically targeting areas like **Baltimore, MD** and **Washington DC**—to identify which skills are most valued by employers today.
 
 ## Core Features
 
