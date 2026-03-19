@@ -36,7 +36,7 @@ This project was developed to provide granular insights into the evolving requir
 * **Visualization**: Matplotlib, Seaborn
 
 ## 📈 Impact & Insights
-This tool provides a quantitative edge for navigating the data science job market:
+This tool provides a quantitative edge for navigating the data science and data analytics job market:
 * **Trend Detection**: Successfully identifies the rising prevalence of **Generative AI**, **LLMs**, and **RAG** technologies in Senior and Principal roles.
 * **Localized Intelligence**: Optimized for the **Baltimore/Washington D.C.** market, highlighting the specific dominance of AWS and Spark in the region's tech stack.
 
